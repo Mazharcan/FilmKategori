@@ -1,4 +1,4 @@
-﻿namespace FilmCategory
+﻿namespace FilmManager
 {
     partial class frmFilm
     {
@@ -43,25 +43,25 @@
             this.filmKategoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.kategorilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmKayıtDataSet = new FilmCategory.FilmKayıtDataSet();
+            this.filmKayıtDataSet = new FilmManager.FilmKayıtDataSet();
             this.kategorilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter = new FilmCategory.FilmKategoriDataSetTableAdapters.FilmTableAdapter();
-            this.kategorilerTableAdapter = new FilmCategory.FilmKategoriDataSetTableAdapters.KategorilerTableAdapter();
+            this.filmTableAdapter = new FilmManager.FilmKategoriDataSetTableAdapters.FilmTableAdapter();
+            this.kategorilerTableAdapter = new FilmManager.FilmKategoriDataSetTableAdapters.KategorilerTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilmAdı = new System.Windows.Forms.TextBox();
             this.txtYonetmen = new System.Windows.Forms.TextBox();
-            this.filmKategoriDataSet1 = new FilmCategory.FilmKategoriDataSet1();
+            this.filmKategoriDataSet1 = new FilmManager.FilmKategoriDataSet1();
             this.filmKategoriDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmKayıtDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kategorilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorilerTableAdapter1 = new FilmCategory.FilmKayıtDataSetTableAdapters.KategorilerTableAdapter();
+            this.kategorilerTableAdapter1 = new FilmManager.FilmKayıtDataSetTableAdapters.KategorilerTableAdapter();
             this.filmBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter1 = new FilmCategory.FilmKayıtDataSetTableAdapters.FilmTableAdapter();
+            this.filmTableAdapter1 = new FilmManager.FilmKayıtDataSetTableAdapters.FilmTableAdapter();
             this.filmBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter2 = new FilmCategory.FilmKategoriDataSet1TableAdapters.FilmTableAdapter();
+            this.filmTableAdapter2 = new FilmManager.FilmKategoriDataSet1TableAdapters.FilmTableAdapter();
             this.kategorilerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorilerTableAdapter2 = new FilmCategory.FilmKategoriDataSet1TableAdapters.KategorilerTableAdapter();
+            this.kategorilerTableAdapter2 = new FilmManager.FilmKategoriDataSet1TableAdapters.KategorilerTableAdapter();
             this.filmBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.filmBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dateYapımYılı = new System.Windows.Forms.DateTimePicker();

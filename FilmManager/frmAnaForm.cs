@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmCategory
+namespace FilmManager
 {
     public partial class frmAnaForm : Form
     {

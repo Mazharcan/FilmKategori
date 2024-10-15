@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{586C5A58-42E9-4B7E-9785-03E89839C688}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FilmCategory</RootNamespace>
-    <AssemblyName>FilmCategory</AssemblyName>
+    <RootNamespace>FilmManager</RootNamespace>
+    <AssemblyName>FilmManager</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FilmKategoriConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FilmKategoriConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FilmCategory.Properties.Settings.GlobalReference.Default.FilmKategoriConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FilmKategoriConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FilmKategoriConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FilmManager.Properties.Settings.GlobalReference.Default.FilmKategoriConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilmTableAdapter" GeneratorDataComponentClassName="FilmTableAdapter" Name="Film" UserDataComponentName="FilmTableAdapter">
@@ -135,26 +135,26 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)</C
   <xs:element name="FilmKategoriDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FilmKategoriDataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FilmKategoriDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Film" msprop:Generator_RowClassName="FilmRow" msprop:Generator_RowEvHandlerName="FilmRowChangeEventHandler" msprop:Generator_RowDeletedName="FilmRowDeleted" msprop:Generator_RowDeletingName="FilmRowDeleting" msprop:Generator_RowEvArgName="FilmRowChangeEvent" msprop:Generator_TablePropName="Film" msprop:Generator_RowChangedName="FilmRowChanged" msprop:Generator_UserTableName="Film" msprop:Generator_RowChangingName="FilmRowChanging" msprop:Generator_TableClassName="FilmDataTable" msprop:Generator_TableVarName="tableFilm">
+        <xs:element name="Film" msprop:Generator_RowEvHandlerName="FilmRowChangeEventHandler" msprop:Generator_RowDeletedName="FilmRowDeleted" msprop:Generator_RowDeletingName="FilmRowDeleting" msprop:Generator_RowEvArgName="FilmRowChangeEvent" msprop:Generator_TablePropName="Film" msprop:Generator_RowChangedName="FilmRowChanged" msprop:Generator_UserTableName="Film" msprop:Generator_RowChangingName="FilmRowChanging" msprop:Generator_RowClassName="FilmRow" msprop:Generator_TableClassName="FilmDataTable" msprop:Generator_TableVarName="tableFilm">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="filmId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="filmId" msprop:Generator_ColumnPropNameInTable="filmIdColumn" msprop:Generator_ColumnPropNameInRow="filmId" msprop:Generator_ColumnVarNameInTable="columnfilmId" type="xs:int" />
-              <xs:element name="filmAd" msprop:Generator_UserColumnName="filmAd" msprop:Generator_ColumnPropNameInTable="filmAdColumn" msprop:Generator_ColumnPropNameInRow="filmAd" msprop:Generator_ColumnVarNameInTable="columnfilmAd" minOccurs="0">
+              <xs:element name="filmId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="filmIdColumn" msprop:Generator_ColumnPropNameInRow="filmId" msprop:Generator_UserColumnName="filmId" msprop:Generator_ColumnVarNameInTable="columnfilmId" type="xs:int" />
+              <xs:element name="filmAd" msprop:Generator_ColumnPropNameInTable="filmAdColumn" msprop:Generator_ColumnPropNameInRow="filmAd" msprop:Generator_UserColumnName="filmAd" msprop:Generator_ColumnVarNameInTable="columnfilmAd" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="filmYonetmen" msprop:Generator_UserColumnName="filmYonetmen" msprop:Generator_ColumnPropNameInTable="filmYonetmenColumn" msprop:Generator_ColumnPropNameInRow="filmYonetmen" msprop:Generator_ColumnVarNameInTable="columnfilmYonetmen" minOccurs="0">
+              <xs:element name="filmYonetmen" msprop:Generator_ColumnPropNameInTable="filmYonetmenColumn" msprop:Generator_ColumnPropNameInRow="filmYonetmen" msprop:Generator_UserColumnName="filmYonetmen" msprop:Generator_ColumnVarNameInTable="columnfilmYonetmen" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="yapımYılı" msprop:Generator_UserColumnName="yapımYılı" msprop:Generator_ColumnPropNameInTable="yapımYılıColumn" msprop:Generator_ColumnPropNameInRow="yapımYılı" msprop:Generator_ColumnVarNameInTable="columnyapımYılı" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="KategoriId" msprop:Generator_UserColumnName="KategoriId" msprop:Generator_ColumnPropNameInTable="KategoriIdColumn" msprop:Generator_ColumnPropNameInRow="KategoriId" msprop:Generator_ColumnVarNameInTable="columnKategoriId" minOccurs="0">
+              <xs:element name="yapımYılı" msprop:Generator_ColumnPropNameInTable="yapımYılıColumn" msprop:Generator_ColumnPropNameInRow="yapımYılı" msprop:Generator_UserColumnName="yapımYılı" msprop:Generator_ColumnVarNameInTable="columnyapımYılı" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KategoriId" msprop:Generator_ColumnPropNameInTable="KategoriIdColumn" msprop:Generator_ColumnPropNameInRow="KategoriId" msprop:Generator_UserColumnName="KategoriId" msprop:Generator_ColumnVarNameInTable="columnKategoriId" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -164,17 +164,17 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)</C
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Kategoriler" msprop:Generator_RowClassName="KategorilerRow" msprop:Generator_RowEvHandlerName="KategorilerRowChangeEventHandler" msprop:Generator_RowDeletedName="KategorilerRowDeleted" msprop:Generator_RowDeletingName="KategorilerRowDeleting" msprop:Generator_RowEvArgName="KategorilerRowChangeEvent" msprop:Generator_TablePropName="Kategoriler" msprop:Generator_RowChangedName="KategorilerRowChanged" msprop:Generator_UserTableName="Kategoriler" msprop:Generator_RowChangingName="KategorilerRowChanging" msprop:Generator_TableClassName="KategorilerDataTable" msprop:Generator_TableVarName="tableKategoriler">
+        <xs:element name="Kategoriler" msprop:Generator_RowEvHandlerName="KategorilerRowChangeEventHandler" msprop:Generator_RowDeletedName="KategorilerRowDeleted" msprop:Generator_RowDeletingName="KategorilerRowDeleting" msprop:Generator_RowEvArgName="KategorilerRowChangeEvent" msprop:Generator_TablePropName="Kategoriler" msprop:Generator_RowChangedName="KategorilerRowChanged" msprop:Generator_UserTableName="Kategoriler" msprop:Generator_RowChangingName="KategorilerRowChanging" msprop:Generator_RowClassName="KategorilerRow" msprop:Generator_TableClassName="KategorilerDataTable" msprop:Generator_TableVarName="tableKategoriler">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="KategoriId" msprop:Generator_UserColumnName="KategoriId" msprop:Generator_ColumnPropNameInTable="KategoriIdColumn" msprop:Generator_ColumnPropNameInRow="KategoriId" msprop:Generator_ColumnVarNameInTable="columnKategoriId">
+              <xs:element name="KategoriId" msprop:Generator_ColumnPropNameInTable="KategoriIdColumn" msprop:Generator_ColumnPropNameInRow="KategoriId" msprop:Generator_UserColumnName="KategoriId" msprop:Generator_ColumnVarNameInTable="columnKategoriId">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Kategori" msprop:Generator_UserColumnName="Kategori" msprop:Generator_ColumnPropNameInTable="KategoriColumn" msprop:Generator_ColumnPropNameInRow="Kategori" msprop:Generator_ColumnVarNameInTable="columnKategori" minOccurs="0">
+              <xs:element name="Kategori" msprop:Generator_ColumnPropNameInTable="KategoriColumn" msprop:Generator_ColumnPropNameInRow="Kategori" msprop:Generator_UserColumnName="Kategori" msprop:Generator_ColumnVarNameInTable="columnKategori" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -197,7 +197,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)</C
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Film_Kategoriler1" msdata:parent="Kategoriler" msdata:child="Film" msdata:parentkey="KategoriId" msdata:childkey="KategoriId" msprop:Generator_UserParentTable="Kategoriler" msprop:Generator_UserChildTable="Film" msprop:Generator_RelationVarName="relationFK_Film_Kategoriler1" msprop:Generator_ChildPropName="GetFilmRows" msprop:Generator_ParentPropName="KategorilerRow" msprop:Generator_UserRelationName="FK_Film_Kategoriler1" />
+      <msdata:Relationship name="FK_Film_Kategoriler1" msdata:parent="Kategoriler" msdata:child="Film" msdata:parentkey="KategoriId" msdata:childkey="KategoriId" msprop:Generator_UserParentTable="Kategoriler" msprop:Generator_UserChildTable="Film" msprop:Generator_RelationVarName="relationFK_Film_Kategoriler1" msprop:Generator_ChildPropName="GetFilmRows" msprop:Generator_UserRelationName="FK_Film_Kategoriler1" msprop:Generator_ParentPropName="KategorilerRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

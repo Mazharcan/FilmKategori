@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
-namespace FilmCategory
+namespace FilmManager
 {
     public partial class frmKategori : Form
     {

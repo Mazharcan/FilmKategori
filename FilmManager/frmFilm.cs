@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Globalization;
 
-namespace FilmCategory
+namespace FilmManager
 {
     public partial class frmFilm : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace FilmCategory
+﻿namespace FilmManager
 {
     partial class frmAnaForm
     {

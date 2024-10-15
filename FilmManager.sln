@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmCategory", "FilmCategory\FilmCategory.csproj", "{586C5A58-42E9-4B7E-9785-03E89839C688}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmManager", "FilmCategory\FilmManager.csproj", "{586C5A58-42E9-4B7E-9785-03E89839C688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

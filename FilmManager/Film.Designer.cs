@@ -1,4 +1,4 @@
-﻿namespace FilmCategory
+﻿namespace FilmManager
 {
     partial class Film
     {
@@ -33,20 +33,20 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.filmKategoriDataSet = new FilmCategory.FilmKategoriDataSet();
+            this.filmKategoriDataSet = new FilmManager.FilmKategoriDataSet();
             this.filmKategoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmKategoriDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txtAra = new System.Windows.Forms.TextBox();
             this.kategorilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorilerTableAdapter = new FilmCategory.FilmKategoriDataSetTableAdapters.KategorilerTableAdapter();
+            this.kategorilerTableAdapter = new FilmManager.FilmKategoriDataSetTableAdapters.KategorilerTableAdapter();
             this.cmbAlan = new System.Windows.Forms.ComboBox();
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter = new FilmCategory.FilmKategoriDataSetTableAdapters.FilmTableAdapter();
+            this.filmTableAdapter = new FilmManager.FilmKategoriDataSetTableAdapters.FilmTableAdapter();
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.kategorilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmKayıtDataSet = new FilmCategory.FilmKayıtDataSet();
+            this.filmKayıtDataSet = new FilmManager.FilmKayıtDataSet();
             this.filmKayıtDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorilerTableAdapter1 = new FilmCategory.FilmKayıtDataSetTableAdapters.KategorilerTableAdapter();
+            this.kategorilerTableAdapter1 = new FilmManager.FilmKayıtDataSetTableAdapters.KategorilerTableAdapter();
             this.dateYapımYılı = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmKategoriDataSet)).BeginInit();
