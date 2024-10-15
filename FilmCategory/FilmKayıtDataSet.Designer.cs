@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FilmKategori {
+namespace FilmCategory {
     
     
     /// <summary>
@@ -1197,7 +1197,7 @@ namespace FilmKategori {
         }
     }
 }
-namespace FilmKategori.FilmKayıtDataSetTableAdapters {
+namespace FilmCategory.FilmKayıtDataSetTableAdapters {
     
     
     /// <summary>
@@ -1375,7 +1375,7 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FilmKategori.Properties.Settings.Default.FilmKayıtConnectionString;
+            this._connection.ConnectionString = global::FilmCategory.Properties.Settings.Default.FilmKayıtConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1783,7 +1783,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FilmKategori.Properties.Settings.Default.FilmKayıtConnectionString;
+            this._connection.ConnectionString = global::FilmCategory.Properties.Settings.Default.FilmKayıtConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

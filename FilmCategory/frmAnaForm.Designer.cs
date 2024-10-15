@@ -1,4 +1,4 @@
-﻿namespace FilmKategori
+﻿namespace FilmCategory
 {
     partial class frmAnaForm
     {
@@ -39,7 +39,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(224, 9);
+            this.label1.Location = new System.Drawing.Point(231, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 78);
             this.label1.TabIndex = 21;
@@ -50,11 +50,11 @@
             this.btnKategori.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnKategori.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKategori.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKategori.Location = new System.Drawing.Point(39, 153);
+            this.btnKategori.Location = new System.Drawing.Point(40, 153);
             this.btnKategori.Name = "btnKategori";
             this.btnKategori.Size = new System.Drawing.Size(194, 133);
             this.btnKategori.TabIndex = 1;
-            this.btnKategori.Text = "KATEGORİ İŞLEMLERİ";
+            this.btnKategori.Text = "KATEGORİ ";
             this.btnKategori.UseVisualStyleBackColor = false;
             this.btnKategori.Click += new System.EventHandler(this.btnKategori_Click);
             // 
@@ -63,11 +63,11 @@
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(299, 153);
+            this.button1.Location = new System.Drawing.Point(300, 153);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 133);
             this.button1.TabIndex = 2;
-            this.button1.Text = "FİLM EKLE";
+            this.button1.Text = "FİLM";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -76,7 +76,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(565, 153);
+            this.button2.Location = new System.Drawing.Point(560, 153);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 133);
             this.button2.TabIndex = 3;

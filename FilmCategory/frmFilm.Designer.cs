@@ -1,4 +1,4 @@
-﻿namespace FilmKategori
+﻿namespace FilmCategory
 {
     partial class frmFilm
     {
@@ -43,28 +43,28 @@
             this.filmKategoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.kategorilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmKayıtDataSet = new FilmKategori.FilmKayıtDataSet();
+            this.filmKayıtDataSet = new FilmCategory.FilmKayıtDataSet();
             this.kategorilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter = new FilmKategori.FilmKategoriDataSetTableAdapters.FilmTableAdapter();
-            this.kategorilerTableAdapter = new FilmKategori.FilmKategoriDataSetTableAdapters.KategorilerTableAdapter();
+            this.filmTableAdapter = new FilmCategory.FilmKategoriDataSetTableAdapters.FilmTableAdapter();
+            this.kategorilerTableAdapter = new FilmCategory.FilmKategoriDataSetTableAdapters.KategorilerTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilmAdı = new System.Windows.Forms.TextBox();
             this.txtYonetmen = new System.Windows.Forms.TextBox();
-            this.txtYapımYılı = new System.Windows.Forms.TextBox();
-            this.filmKategoriDataSet1 = new FilmKategori.FilmKategoriDataSet1();
+            this.filmKategoriDataSet1 = new FilmCategory.FilmKategoriDataSet1();
             this.filmKategoriDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmKayıtDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kategorilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorilerTableAdapter1 = new FilmKategori.FilmKayıtDataSetTableAdapters.KategorilerTableAdapter();
+            this.kategorilerTableAdapter1 = new FilmCategory.FilmKayıtDataSetTableAdapters.KategorilerTableAdapter();
             this.filmBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter1 = new FilmKategori.FilmKayıtDataSetTableAdapters.FilmTableAdapter();
+            this.filmTableAdapter1 = new FilmCategory.FilmKayıtDataSetTableAdapters.FilmTableAdapter();
             this.filmBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmTableAdapter2 = new FilmKategori.FilmKategoriDataSet1TableAdapters.FilmTableAdapter();
+            this.filmTableAdapter2 = new FilmCategory.FilmKategoriDataSet1TableAdapters.FilmTableAdapter();
             this.kategorilerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorilerTableAdapter2 = new FilmKategori.FilmKategoriDataSet1TableAdapters.KategorilerTableAdapter();
+            this.kategorilerTableAdapter2 = new FilmCategory.FilmKategoriDataSet1TableAdapters.KategorilerTableAdapter();
             this.filmBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.filmBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.dateYapımYılı = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmKategoriDataSetBindingSource)).BeginInit();
@@ -132,6 +132,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(56, 94);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(544, 461);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -250,9 +251,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 78);
+            this.label1.Size = new System.Drawing.Size(448, 78);
             this.label1.TabIndex = 19;
-            this.label1.Text = "FİLM ARA";
+            this.label1.Text = "FİLM İŞLEMLERİ";
             // 
             // txtFilmAdı
             // 
@@ -271,15 +272,6 @@
             this.txtYonetmen.TabIndex = 3;
             this.txtYonetmen.MouseLeave += new System.EventHandler(this.txtYonetmen_MouseLeave);
             this.txtYonetmen.MouseHover += new System.EventHandler(this.txtYonetmen_MouseHover);
-            // 
-            // txtYapımYılı
-            // 
-            this.txtYapımYılı.Location = new System.Drawing.Point(798, 290);
-            this.txtYapımYılı.Name = "txtYapımYılı";
-            this.txtYapımYılı.Size = new System.Drawing.Size(237, 20);
-            this.txtYapımYılı.TabIndex = 4;
-            this.txtYapımYılı.MouseLeave += new System.EventHandler(this.txtYapımYılı_MouseLeave);
-            this.txtYapımYılı.MouseHover += new System.EventHandler(this.txtYapımYılı_MouseHover);
             // 
             // filmKategoriDataSet1
             // 
@@ -342,13 +334,21 @@
             this.filmBindingSource5.DataMember = "Film";
             this.filmBindingSource5.DataSource = this.filmKayıtDataSet;
             // 
+            // dateYapımYılı
+            // 
+            this.dateYapımYılı.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dateYapımYılı.Location = new System.Drawing.Point(798, 286);
+            this.dateYapımYılı.Name = "dateYapımYılı";
+            this.dateYapımYılı.Size = new System.Drawing.Size(237, 22);
+            this.dateYapımYılı.TabIndex = 26;
+            // 
             // frmFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1150, 637);
-            this.Controls.Add(this.txtYapımYılı);
+            this.Controls.Add(this.dateYapımYılı);
             this.Controls.Add(this.txtYonetmen);
             this.Controls.Add(this.txtFilmAdı);
             this.Controls.Add(this.cmbKategori);
@@ -412,7 +412,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilmAdı;
         private System.Windows.Forms.TextBox txtYonetmen;
-        private System.Windows.Forms.TextBox txtYapımYılı;
         private System.Windows.Forms.BindingSource filmKayıtDataSetBindingSource;
         private FilmKayıtDataSet filmKayıtDataSet;
         private FilmKategoriDataSet1 filmKategoriDataSet1;
@@ -428,5 +427,6 @@
         private FilmKategoriDataSet1TableAdapters.KategorilerTableAdapter kategorilerTableAdapter2;
         private System.Windows.Forms.BindingSource filmBindingSource4;
         private System.Windows.Forms.BindingSource filmBindingSource5;
+        private System.Windows.Forms.DateTimePicker dateYapımYılı;
     }
 }

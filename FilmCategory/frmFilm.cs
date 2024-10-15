@@ -12,11 +12,12 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Globalization;
 
-namespace FilmKategori
+namespace FilmCategory
 {
     public partial class frmFilm : Form
     {
         SqlConnection connection = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=FilmKayıt;Integrated Security=True;");
+
         public frmFilm()
         {
             InitializeComponent();
@@ -26,7 +27,6 @@ namespace FilmKategori
             txtFilmAdı.Clear();
             cmbKategori.SelectedIndex = -1;
             txtYonetmen.Clear();
-            txtYapımYılı.Clear();
             txtFilmAdı.Focus();
         }
         int secilenFilmId;
@@ -34,41 +34,41 @@ namespace FilmKategori
         {
             try
             {
-                DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter("select * from Film", connection);
-                adapter.Fill(dt);
-                dataGridView1.DataSource = dt;
+                using (DataTable dt = new DataTable())
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("select * from Film", connection))
+                    {
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
         private void btnEkle_Click(object sender, EventArgs e)
         {
             try
             {
-                string tarihString = txtYapımYılı.Text;
-                DateTime tarih;
-                if (!DateTime.TryParseExact(tarihString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out tarih))
-                {
-                    throw new ApplicationException("Tarih formatı yanlış. Lütfen tarihi yyyy-MM-dd formatında giriniz. Örnek: 2020-06-17");
-                }
+                DateTime selectedDate = dateYapımYılı.Value;
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Film (filmAd, filmYonetmen, Kategori, yapımYılı) VALUES (@p1, @p2, @p3, @p4)", connection);
-                cmd.Parameters.AddWithValue("@p1", txtFilmAdı.Text);
-                cmd.Parameters.AddWithValue("@p2", txtYonetmen.Text);
-                cmd.Parameters.AddWithValue("@p3", cmbKategori.SelectedIndex);
-                cmd.Parameters.AddWithValue("@p4", txtYapımYılı.Text);
-                
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Film türü Kategori tablosuna eklenmiştir.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FilmTemizle();
-                FilmListele();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Film (filmAd, filmYonetmen, Kategori, yapımYılı) VALUES (@p1, @p2, @p3, @p4)", connection))
+                {
+                    cmd.Parameters.AddWithValue("@p1", txtFilmAdı.Text);
+                    cmd.Parameters.AddWithValue("@p2", txtYonetmen.Text);
+                    cmd.Parameters.AddWithValue("@p3", cmbKategori.SelectedValue); //selectedIndex kullanma : Kategori sütununun tipine bağlı olarak sorun yaratabilir. Eğer Kategori bir tamsayı değilse, uygun bir değer kullanmalısınız. 
+                    cmd.Parameters.AddWithValue("@p4", selectedDate);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Film türü Kategori tablosuna eklenmiştir.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FilmTemizle();
+                    FilmListele();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             finally
             {
@@ -84,7 +84,14 @@ namespace FilmKategori
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            FilmListele();
+            try
+            {
+                FilmListele();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -92,16 +99,18 @@ namespace FilmKategori
             try
             {
                 connection.Open();
-                SqlCommand sqlCommand = new SqlCommand("delete from film where  filmAd = @p1", connection);
-                sqlCommand.Parameters.AddWithValue("@p1", txtFilmAdı.Text);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Film, Film tablosundan silinmiştir.", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                FilmTemizle();
-                FilmListele();
+                using (SqlCommand sqlCommand = new SqlCommand("delete from film where  filmAd = @p1", connection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@p1", txtFilmAdı.Text);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Film, Film tablosundan silinmiştir.", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FilmTemizle();
+                    FilmListele();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             finally
             {
@@ -131,43 +140,41 @@ namespace FilmKategori
                 // Seçilen satırdaki verileri al
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
                 // Verileri ilgili bileşenlere atama
+                secilenFilmId = Convert.ToInt32(selectedRow.Cells["filmId"].Value); // filmId sütununun adını kullanın
                 txtFilmAdı.Text = selectedRow.Cells["FilmAd"].Value.ToString();
                 txtYonetmen.Text = selectedRow.Cells["FilmYonetmen"].Value.ToString();
-                txtYapımYılı.Text = selectedRow.Cells["YapımYılı"].Value.ToString();
+                DateTime tarih = Convert.ToDateTime(selectedRow.Cells["YapımYılı"].Value);
+                dateYapımYılı.Value = tarih;
+                //mskbxYapımYılı.Text = selectedRow.Cells["YapımYılı"].Value.ToString();
                 cmbKategori.SelectedValue = selectedRow.Cells["Kategori"].Value;
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
-
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
             try
             {
-                string tarihString = txtYapımYılı.Text;
-                DateTime tarih;
-                if (!DateTime.TryParseExact(tarihString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out tarih))
-                {
-                    throw new ApplicationException("Tarih formatı yanlış. Lütfen tarihi yyyy-MM-dd formatında giriniz. Örnek: 2020-06-17");
-                }
+                DateTime selectedDate = dateYapımYılı.Value;
                 connection.Open();
-                SqlCommand sqlCommand = new SqlCommand("UPDATE Film SET filmAd = @p1, filmYonetmen = @p2, kategori = @p3, yapımyılı = @p4 WHERE filmId = @p5", connection);
-                sqlCommand.Parameters.AddWithValue("@p1", txtFilmAdı.Text);
-                sqlCommand.Parameters.AddWithValue("@p2", txtYonetmen.Text);
-                sqlCommand.Parameters.AddWithValue("@p3", cmbKategori.SelectedIndex);
-                sqlCommand.Parameters.AddWithValue("@p4", txtYapımYılı.Text);
-                sqlCommand.Parameters.AddWithValue("@p5", secilenFilmId);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Film Güncellendi", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                FilmTemizle();
-                FilmListele();
+                using (SqlCommand sqlCommand = new SqlCommand("UPDATE Film SET filmAd = @p1, filmYonetmen = @p2, kategori = @p3, yapımyılı = @p4 WHERE filmId = @p5", connection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@p1", txtFilmAdı.Text);
+                    sqlCommand.Parameters.AddWithValue("@p2", txtYonetmen.Text);
+                    sqlCommand.Parameters.AddWithValue("@p3", cmbKategori.SelectedValue);
+                    sqlCommand.Parameters.AddWithValue("@p4", selectedDate);
+                    sqlCommand.Parameters.AddWithValue("@p5", secilenFilmId);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Film Güncellendi", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FilmTemizle();
+                    FilmListele();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             finally
             {
@@ -201,9 +208,9 @@ namespace FilmKategori
             txtYonetmen.BackColor = Color.Moccasin;
         }
 
-        private void txtYapımYılı_MouseHover(object sender, EventArgs e)
+        private void mskbxYapımYılı_MouseHover(object sender, EventArgs e)
         {
-            txtYapımYılı.BackColor = Color.Moccasin;
+            dateYapımYılı.BackColor = Color.Moccasin;
         }
 
         private void txtFilmAdı_MouseLeave(object sender, EventArgs e)
@@ -221,9 +228,10 @@ namespace FilmKategori
             txtYonetmen.BackColor = SystemColors.ButtonHighlight;
         }
 
-        private void txtYapımYılı_MouseLeave(object sender, EventArgs e)
+
+        private void mskbxYapımYılı_MouseLeave(object sender, EventArgs e)
         {
-            txtYapımYılı.BackColor = SystemColors.ButtonHighlight;
+            dateYapımYılı.BackColor = SystemColors.ButtonHighlight;
         }
     }
 }

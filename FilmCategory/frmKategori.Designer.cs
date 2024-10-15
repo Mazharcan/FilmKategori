@@ -1,4 +1,4 @@
-﻿namespace FilmKategori
+﻿namespace FilmCategory
 {
     partial class frmKategori
     {
@@ -48,9 +48,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(41, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 78);
+            this.label1.Size = new System.Drawing.Size(587, 78);
             this.label1.TabIndex = 0;
-            this.label1.Text = "KATEGORİLER";
+            this.label1.Text = "KATEGORİ İŞLEMLERİ";
             // 
             // dataGridView1
             // 
@@ -58,6 +58,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(54, 146);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(439, 270);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);

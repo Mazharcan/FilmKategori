@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FilmKategori {
+namespace FilmCategory {
     
     
     /// <summary>
@@ -1099,7 +1099,7 @@ namespace FilmKategori {
         }
     }
 }
-namespace FilmKategori.FilmKategoriDataSetTableAdapters {
+namespace FilmCategory.FilmKategoriDataSetTableAdapters {
     
     
     /// <summary>
@@ -1243,7 +1243,7 @@ namespace FilmKategori.FilmKategoriDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FilmKategori.Properties.Settings.Default.FilmKategoriConnectionString;
+            this._connection.ConnectionString = global::FilmCategory.Properties.Settings.Default.FilmKategoriConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1502,7 +1502,7 @@ namespace FilmKategori.FilmKategoriDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FilmKategori.Properties.Settings.Default.FilmKategoriConnectionString;
+            this._connection.ConnectionString = global::FilmCategory.Properties.Settings.Default.FilmKategoriConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

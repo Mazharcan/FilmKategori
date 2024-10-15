@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmKategori
+namespace FilmCategory
 {
     public partial class Film : Form
     {
@@ -19,7 +19,7 @@ namespace FilmKategori
             InitializeComponent();
         }
         SqlConnection connection = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=FilmKayıt;Integrated Security=True;");
-        
+
         private void btnAra_Click(object sender, EventArgs e)
         {
             try
@@ -28,41 +28,54 @@ namespace FilmKategori
 
                 if (cmbAlan.SelectedIndex == 0)
                 {
-                    SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT * FROM Film WHERE filmAd LIKE @p1", connection);
-                    adapter1.SelectCommand.Parameters.AddWithValue("@p1", txtAra.Text + "%");
-                    DataTable dt1 = new DataTable();
-                    adapter1.Fill(dt1);
-                    dataGridView1.DataSource = dt1;
+                    using (SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT * FROM Film WHERE filmAd LIKE @p1", connection))
+                    {
+                        adapter1.SelectCommand.Parameters.AddWithValue("@p1", txtAra.Text + "%");
+                        using (DataTable dt1 = new DataTable())
+                        {
+                            adapter1.Fill(dt1);
+                            dataGridView1.DataSource = dt1;
+                        }
+                    }
                 }
                 else if (cmbAlan.SelectedIndex == 1)
                 {
-                    SqlDataAdapter adapter2 = new SqlDataAdapter("SELECT * FROM Film WHERE filmYonetmen LIKE @p1", connection);
-                    adapter2.SelectCommand.Parameters.AddWithValue("@p1", txtAra.Text + "%");
-                    DataTable dt2 = new DataTable();
-                    adapter2.Fill(dt2);
-                    dataGridView1.DataSource = dt2;
+                    using (SqlDataAdapter adapter2 = new SqlDataAdapter("SELECT * FROM Film WHERE filmYonetmen LIKE @p1", connection))
+                    {
+                        adapter2.SelectCommand.Parameters.AddWithValue("@p1", txtAra.Text + "%");
+                        using (DataTable dt2 = new DataTable())
+                        {
+                            adapter2.Fill(dt2);
+                            dataGridView1.DataSource = dt2;
+                        }
+                    }
                 }
                 else if (cmbAlan.SelectedIndex == 2)
                 {
-                    string tarihString = txtAra.Text;
-                    DateTime tarih;
-                    if (!DateTime.TryParseExact(tarihString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out tarih))
+                    DateTime dateTime = dateYapımYılı.Value;
+                    string formattedDate = dateTime.ToString("yyyy-MM-dd"); // Tarih formatını ayarla
+
+                    using (SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT * FROM Film WHERE yapımYılı LIKE @p1", connection))
                     {
-                        throw new ApplicationException("Tarih formatı yanlış. Lütfen tarihi yyyy-MM-dd formatında giriniz. Örnek: 2020-06-17");
+                        adapter1.SelectCommand.Parameters.AddWithValue("@p1", formattedDate + "%");
+                        using (DataTable dt1 = new DataTable())
+                        {
+                            adapter1.Fill(dt1);
+                            dataGridView1.DataSource = dt1;
+                        }
                     }
-                    SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT * FROM Film WHERE yapımYılı LIKE @p1", connection);
-                    adapter1.SelectCommand.Parameters.AddWithValue("@p1", txtAra.Text + "%");
-                    DataTable dt1 = new DataTable();
-                    adapter1.Fill(dt1);
-                    dataGridView1.DataSource = dt1;
                 }
                 else if (cmbAlan.SelectedIndex == 3)
                 {
-                    SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT * FROM Film WHERE Kategori = @p1", connection);
-                    adapter1.SelectCommand.Parameters.AddWithValue("@p1", cmbKategori.SelectedValue);
-                    DataTable dt1 = new DataTable();
-                    adapter1.Fill(dt1);
-                    dataGridView1.DataSource = dt1;
+                    using (SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT * FROM Film WHERE Kategori = @p1", connection))
+                    {
+                        adapter1.SelectCommand.Parameters.AddWithValue("@p1", cmbKategori.SelectedValue);
+                        using (DataTable dt1 = new DataTable())
+                        {
+                            adapter1.Fill(dt1);
+                            dataGridView1.DataSource = dt1;
+                        }
+                    }
                 }
             }
             catch (ApplicationException ex)
@@ -86,15 +99,22 @@ namespace FilmKategori
 
         private void cmbAlan_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (cmbAlan.SelectedIndex == 3)
+            if (cmbAlan.SelectedIndex == 0 || cmbAlan.SelectedIndex == 1)
             {
-                cmbKategori.Visible = true;
-                txtAra.Visible = false;  // Kategori seçilirse textBox'ı gizle
+                txtAra.Visible = true;
+                cmbKategori.Visible = false;
+                dateYapımYılı.Visible = false;
+            }else if (cmbAlan.SelectedIndex == 2)
+            {
+                dateYapımYılı.Visible = true;
+                cmbKategori.Visible = false;
+                txtAra.Visible = false;
             }
             else
             {
-                cmbKategori.Visible = false;
-                txtAra.Visible = true;  // Diğer seçimlerde textBox'ı göster
+                cmbKategori.Visible = true;
+                dateYapımYılı.Visible = false;
+                txtAra.Visible = false;
             }
         }
         private void Film_FormClosing(object sender, FormClosingEventArgs e)

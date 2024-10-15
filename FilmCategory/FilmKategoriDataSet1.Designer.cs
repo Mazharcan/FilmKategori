@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FilmKategori {
+namespace FilmCategory {
     
     
     /// <summary>
@@ -20,21 +20,21 @@ namespace FilmKategori {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FilmKayıtDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FilmKategoriDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FilmKayıtDataSet1 : global::System.Data.DataSet {
+    public partial class FilmKategoriDataSet1 : global::System.Data.DataSet {
         
         private FilmDataTable tableFilm;
         
         private KategorilerDataTable tableKategoriler;
         
-        private global::System.Data.DataRelation relationFK_Film_Kategoriler;
+        private global::System.Data.DataRelation relationFK_Film_Kategoriler1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public FilmKayıtDataSet1() {
+        public FilmKategoriDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -45,7 +45,7 @@ namespace FilmKategori {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected FilmKayıtDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FilmKategoriDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -144,7 +144,7 @@ namespace FilmKategori {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FilmKayıtDataSet1 cln = ((FilmKayıtDataSet1)(base.Clone()));
+            FilmKategoriDataSet1 cln = ((FilmKategoriDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -220,25 +220,25 @@ namespace FilmKategori {
                     this.tableKategoriler.InitVars();
                 }
             }
-            this.relationFK_Film_Kategoriler = this.Relations["FK_Film_Kategoriler"];
+            this.relationFK_Film_Kategoriler1 = this.Relations["FK_Film_Kategoriler1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FilmKayıtDataSet1";
+            this.DataSetName = "FilmKategoriDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FilmKayıtDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/FilmKategoriDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableFilm = new FilmDataTable();
             base.Tables.Add(this.tableFilm);
             this.tableKategoriler = new KategorilerDataTable();
             base.Tables.Add(this.tableKategoriler);
-            this.relationFK_Film_Kategoriler = new global::System.Data.DataRelation("FK_Film_Kategoriler", new global::System.Data.DataColumn[] {
+            this.relationFK_Film_Kategoriler1 = new global::System.Data.DataRelation("FK_Film_Kategoriler1", new global::System.Data.DataColumn[] {
                         this.tableKategoriler.KategoriIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFilm.KategoriColumn}, false);
-            this.Relations.Add(this.relationFK_Film_Kategoriler);
+                        this.tableFilm.KategoriIdColumn}, false);
+            this.Relations.Add(this.relationFK_Film_Kategoriler1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,7 +264,7 @@ namespace FilmKategori {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FilmKayıtDataSet1 ds = new FilmKayıtDataSet1();
+            FilmKategoriDataSet1 ds = new FilmKategoriDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -321,15 +321,15 @@ namespace FilmKategori {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class FilmDataTable : global::System.Data.TypedTableBase<FilmRow> {
             
-            private global::System.Data.DataColumn columnFilmId;
+            private global::System.Data.DataColumn columnfilmId;
             
-            private global::System.Data.DataColumn columnFilmAd;
+            private global::System.Data.DataColumn columnfilmAd;
             
-            private global::System.Data.DataColumn columnFilmYonetmen;
+            private global::System.Data.DataColumn columnfilmYonetmen;
             
-            private global::System.Data.DataColumn columnKategori;
+            private global::System.Data.DataColumn columnyapımYılı;
             
-            private global::System.Data.DataColumn columnYapımYılı;
+            private global::System.Data.DataColumn columnKategoriId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -366,41 +366,41 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FilmIdColumn {
+            public global::System.Data.DataColumn filmIdColumn {
                 get {
-                    return this.columnFilmId;
+                    return this.columnfilmId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FilmAdColumn {
+            public global::System.Data.DataColumn filmAdColumn {
                 get {
-                    return this.columnFilmAd;
+                    return this.columnfilmAd;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FilmYonetmenColumn {
+            public global::System.Data.DataColumn filmYonetmenColumn {
                 get {
-                    return this.columnFilmYonetmen;
+                    return this.columnfilmYonetmen;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn KategoriColumn {
+            public global::System.Data.DataColumn yapımYılıColumn {
                 get {
-                    return this.columnKategori;
+                    return this.columnyapımYılı;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn YapımYılıColumn {
+            public global::System.Data.DataColumn KategoriIdColumn {
                 get {
-                    return this.columnYapımYılı;
+                    return this.columnKategoriId;
                 }
             }
             
@@ -441,16 +441,16 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FilmRow AddFilmRow(string FilmAd, string FilmYonetmen, KategorilerRow parentKategorilerRowByFK_Film_Kategoriler, System.DateTime YapımYılı) {
+            public FilmRow AddFilmRow(string filmAd, string filmYonetmen, System.DateTime yapımYılı, KategorilerRow parentKategorilerRowByFK_Film_Kategoriler1) {
                 FilmRow rowFilmRow = ((FilmRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        FilmAd,
-                        FilmYonetmen,
-                        null,
-                        YapımYılı};
-                if ((parentKategorilerRowByFK_Film_Kategoriler != null)) {
-                    columnValuesArray[3] = parentKategorilerRowByFK_Film_Kategoriler[0];
+                        filmAd,
+                        filmYonetmen,
+                        yapımYılı,
+                        null};
+                if ((parentKategorilerRowByFK_Film_Kategoriler1 != null)) {
+                    columnValuesArray[4] = parentKategorilerRowByFK_Film_Kategoriler1[0];
                 }
                 rowFilmRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFilmRow);
@@ -459,9 +459,9 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FilmRow FindByFilmId(int FilmId) {
+            public FilmRow FindByfilmId(int filmId) {
                 return ((FilmRow)(this.Rows.Find(new object[] {
-                            FilmId})));
+                            filmId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -481,36 +481,37 @@ namespace FilmKategori {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnFilmId = base.Columns["FilmId"];
-                this.columnFilmAd = base.Columns["FilmAd"];
-                this.columnFilmYonetmen = base.Columns["FilmYonetmen"];
-                this.columnKategori = base.Columns["Kategori"];
-                this.columnYapımYılı = base.Columns["YapımYılı"];
+                this.columnfilmId = base.Columns["filmId"];
+                this.columnfilmAd = base.Columns["filmAd"];
+                this.columnfilmYonetmen = base.Columns["filmYonetmen"];
+                this.columnyapımYılı = base.Columns["yapımYılı"];
+                this.columnKategoriId = base.Columns["KategoriId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnFilmId = new global::System.Data.DataColumn("FilmId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFilmId);
-                this.columnFilmAd = new global::System.Data.DataColumn("FilmAd", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFilmAd);
-                this.columnFilmYonetmen = new global::System.Data.DataColumn("FilmYonetmen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFilmYonetmen);
-                this.columnKategori = new global::System.Data.DataColumn("Kategori", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKategori);
-                this.columnYapımYılı = new global::System.Data.DataColumn("YapımYılı", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnYapımYılı);
+                this.columnfilmId = new global::System.Data.DataColumn("filmId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfilmId);
+                this.columnfilmAd = new global::System.Data.DataColumn("filmAd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfilmAd);
+                this.columnfilmYonetmen = new global::System.Data.DataColumn("filmYonetmen", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfilmYonetmen);
+                this.columnyapımYılı = new global::System.Data.DataColumn("yapımYılı", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnyapımYılı);
+                this.columnKategoriId = new global::System.Data.DataColumn("KategoriId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKategoriId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnFilmId}, true));
-                this.columnFilmId.AutoIncrement = true;
-                this.columnFilmId.AutoIncrementSeed = -1;
-                this.columnFilmId.AutoIncrementStep = -1;
-                this.columnFilmId.AllowDBNull = false;
-                this.columnFilmId.ReadOnly = true;
-                this.columnFilmId.Unique = true;
-                this.columnFilmAd.MaxLength = 50;
-                this.columnFilmYonetmen.MaxLength = 50;
+                                this.columnfilmId}, true));
+                this.columnfilmId.AutoIncrement = true;
+                this.columnfilmId.AutoIncrementSeed = -1;
+                this.columnfilmId.AutoIncrementStep = -1;
+                this.columnfilmId.AllowDBNull = false;
+                this.columnfilmId.ReadOnly = true;
+                this.columnfilmId.Unique = true;
+                this.columnfilmAd.MaxLength = 50;
+                this.columnfilmYonetmen.MaxLength = 50;
+                this.columnKategoriId.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -578,7 +579,7 @@ namespace FilmKategori {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FilmKayıtDataSet1 ds = new FilmKayıtDataSet1();
+                FilmKategoriDataSet1 ds = new FilmKategoriDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -734,10 +735,10 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public KategorilerRow AddKategorilerRow(string Kategori) {
+            public KategorilerRow AddKategorilerRow(string KategoriId, string Kategori) {
                 KategorilerRow rowKategorilerRow = ((KategorilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        KategoriId,
                         Kategori};
                 rowKategorilerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKategorilerRow);
@@ -746,7 +747,7 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public KategorilerRow FindByKategoriId(int KategoriId) {
+            public KategorilerRow FindByKategoriId(string KategoriId) {
                 return ((KategorilerRow)(this.Rows.Find(new object[] {
                             KategoriId})));
             }
@@ -775,18 +776,15 @@ namespace FilmKategori {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnKategoriId = new global::System.Data.DataColumn("KategoriId", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnKategoriId = new global::System.Data.DataColumn("KategoriId", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKategoriId);
                 this.columnKategori = new global::System.Data.DataColumn("Kategori", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKategori);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnKategoriId}, true));
-                this.columnKategoriId.AutoIncrement = true;
-                this.columnKategoriId.AutoIncrementSeed = -1;
-                this.columnKategoriId.AutoIncrementStep = -1;
                 this.columnKategoriId.AllowDBNull = false;
-                this.columnKategoriId.ReadOnly = true;
                 this.columnKategoriId.Unique = true;
+                this.columnKategoriId.MaxLength = 50;
                 this.columnKategori.MaxLength = 50;
             }
             
@@ -855,7 +853,7 @@ namespace FilmKategori {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FilmKayıtDataSet1 ds = new FilmKayıtDataSet1();
+                FilmKategoriDataSet1 ds = new FilmKategoriDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -930,76 +928,76 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int FilmId {
+            public int filmId {
                 get {
-                    return ((int)(this[this.tableFilm.FilmIdColumn]));
+                    return ((int)(this[this.tableFilm.filmIdColumn]));
                 }
                 set {
-                    this[this.tableFilm.FilmIdColumn] = value;
+                    this[this.tableFilm.filmIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string FilmAd {
+            public string filmAd {
                 get {
                     try {
-                        return ((string)(this[this.tableFilm.FilmAdColumn]));
+                        return ((string)(this[this.tableFilm.filmAdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FilmAd\' in table \'Film\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'filmAd\' in table \'Film\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFilm.FilmAdColumn] = value;
+                    this[this.tableFilm.filmAdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string FilmYonetmen {
+            public string filmYonetmen {
                 get {
                     try {
-                        return ((string)(this[this.tableFilm.FilmYonetmenColumn]));
+                        return ((string)(this[this.tableFilm.filmYonetmenColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FilmYonetmen\' in table \'Film\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'filmYonetmen\' in table \'Film\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFilm.FilmYonetmenColumn] = value;
+                    this[this.tableFilm.filmYonetmenColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Kategori {
+            public System.DateTime yapımYılı {
                 get {
                     try {
-                        return ((int)(this[this.tableFilm.KategoriColumn]));
+                        return ((global::System.DateTime)(this[this.tableFilm.yapımYılıColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Kategori\' in table \'Film\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'yapımYılı\' in table \'Film\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFilm.KategoriColumn] = value;
+                    this[this.tableFilm.yapımYılıColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime YapımYılı {
+            public string KategoriId {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableFilm.YapımYılıColumn]));
+                        return ((string)(this[this.tableFilm.KategoriIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'YapımYılı\' in table \'Film\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'KategoriId\' in table \'Film\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFilm.YapımYılıColumn] = value;
+                    this[this.tableFilm.KategoriIdColumn] = value;
                 }
             }
             
@@ -1007,59 +1005,59 @@ namespace FilmKategori {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public KategorilerRow KategorilerRow {
                 get {
-                    return ((KategorilerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Film_Kategoriler"])));
+                    return ((KategorilerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Film_Kategoriler1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Film_Kategoriler"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Film_Kategoriler1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFilmAdNull() {
-                return this.IsNull(this.tableFilm.FilmAdColumn);
+            public bool IsfilmAdNull() {
+                return this.IsNull(this.tableFilm.filmAdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFilmAdNull() {
-                this[this.tableFilm.FilmAdColumn] = global::System.Convert.DBNull;
+            public void SetfilmAdNull() {
+                this[this.tableFilm.filmAdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFilmYonetmenNull() {
-                return this.IsNull(this.tableFilm.FilmYonetmenColumn);
+            public bool IsfilmYonetmenNull() {
+                return this.IsNull(this.tableFilm.filmYonetmenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFilmYonetmenNull() {
-                this[this.tableFilm.FilmYonetmenColumn] = global::System.Convert.DBNull;
+            public void SetfilmYonetmenNull() {
+                this[this.tableFilm.filmYonetmenColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsKategoriNull() {
-                return this.IsNull(this.tableFilm.KategoriColumn);
+            public bool IsyapımYılıNull() {
+                return this.IsNull(this.tableFilm.yapımYılıColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetKategoriNull() {
-                this[this.tableFilm.KategoriColumn] = global::System.Convert.DBNull;
+            public void SetyapımYılıNull() {
+                this[this.tableFilm.yapımYılıColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsYapımYılıNull() {
-                return this.IsNull(this.tableFilm.YapımYılıColumn);
+            public bool IsKategoriIdNull() {
+                return this.IsNull(this.tableFilm.KategoriIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetYapımYılıNull() {
-                this[this.tableFilm.YapımYılıColumn] = global::System.Convert.DBNull;
+            public void SetKategoriIdNull() {
+                this[this.tableFilm.KategoriIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1079,9 +1077,9 @@ namespace FilmKategori {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int KategoriId {
+            public string KategoriId {
                 get {
-                    return ((int)(this[this.tableKategoriler.KategoriIdColumn]));
+                    return ((string)(this[this.tableKategoriler.KategoriIdColumn]));
                 }
                 set {
                     this[this.tableKategoriler.KategoriIdColumn] = value;
@@ -1119,11 +1117,11 @@ namespace FilmKategori {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public FilmRow[] GetFilmRows() {
-                if ((this.Table.ChildRelations["FK_Film_Kategoriler"] == null)) {
+                if ((this.Table.ChildRelations["FK_Film_Kategoriler1"] == null)) {
                     return new FilmRow[0];
                 }
                 else {
-                    return ((FilmRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Film_Kategoriler"])));
+                    return ((FilmRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Film_Kategoriler1"])));
                 }
             }
         }
@@ -1197,7 +1195,7 @@ namespace FilmKategori {
         }
     }
 }
-namespace FilmKategori.FilmKayıtDataSet1TableAdapters {
+namespace FilmCategory.FilmKategoriDataSet1TableAdapters {
     
     
     /// <summary>
@@ -1321,61 +1319,61 @@ namespace FilmKategori.FilmKayıtDataSet1TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Film";
-            tableMapping.ColumnMappings.Add("FilmId", "FilmId");
-            tableMapping.ColumnMappings.Add("FilmAd", "FilmAd");
-            tableMapping.ColumnMappings.Add("FilmYonetmen", "FilmYonetmen");
-            tableMapping.ColumnMappings.Add("Kategori", "Kategori");
-            tableMapping.ColumnMappings.Add("YapımYılı", "YapımYılı");
+            tableMapping.ColumnMappings.Add("filmId", "filmId");
+            tableMapping.ColumnMappings.Add("filmAd", "filmAd");
+            tableMapping.ColumnMappings.Add("filmYonetmen", "filmYonetmen");
+            tableMapping.ColumnMappings.Add("yapımYılı", "yapımYılı");
+            tableMapping.ColumnMappings.Add("KategoriId", "KategoriId");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Film] WHERE (([FilmId] = @Original_FilmId) AND ((@IsNull_FilmAd = 1 AND [FilmAd] IS NULL) OR ([FilmAd] = @Original_FilmAd)) AND ((@IsNull_FilmYonetmen = 1 AND [FilmYonetmen] IS NULL) OR ([FilmYonetmen] = @Original_FilmYonetmen)) AND ((@IsNull_Kategori = 1 AND [Kategori] IS NULL) OR ([Kategori] = @Original_Kategori)) AND ((@IsNull_YapımYılı = 1 AND [YapımYılı] IS NULL) OR ([YapımYılı] = @Original_YapımYılı)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Film] WHERE (([filmId] = @Original_filmId) AND ((@IsNull_filmAd = 1 AND [filmAd] IS NULL) OR ([filmAd] = @Original_filmAd)) AND ((@IsNull_filmYonetmen = 1 AND [filmYonetmen] IS NULL) OR ([filmYonetmen] = @Original_filmYonetmen)) AND ((@IsNull_yapımYılı = 1 AND [yapımYılı] IS NULL) OR ([yapımYılı] = @Original_yapımYılı)) AND ((@IsNull_KategoriId = 1 AND [KategoriId] IS NULL) OR ([KategoriId] = @Original_KategoriId)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FilmAd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmAd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmAd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FilmYonetmen", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmYonetmen", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmYonetmen", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_YapımYılı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YapımYılı", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_YapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YapımYılı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_filmId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_filmAd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmAd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_filmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmAd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_filmYonetmen", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmYonetmen", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_filmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmYonetmen", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_yapımYılı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yapımYılı", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_yapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yapımYılı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KategoriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Film] ([FilmAd], [FilmYonetmen], [Kategori], [YapımYılı]) VALU" +
-                "ES (@FilmAd, @FilmYonetmen, @Kategori, @YapımYılı);\r\nSELECT FilmId, FilmAd, Film" +
-                "Yonetmen, Kategori, YapımYılı FROM Film WHERE (FilmId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Film] ([filmAd], [filmYonetmen], [yapımYılı], [KategoriId]) VA" +
+                "LUES (@filmAd, @filmYonetmen, @yapımYılı, @KategoriId);\r\nSELECT filmId, filmAd, " +
+                "filmYonetmen, yapımYılı, KategoriId FROM Film WHERE (filmId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmYonetmen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YapımYılı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmYonetmen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@yapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yapımYılı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Film] SET [FilmAd] = @FilmAd, [FilmYonetmen] = @FilmYonetmen, [Kategori] = @Kategori, [YapımYılı] = @YapımYılı WHERE (([FilmId] = @Original_FilmId) AND ((@IsNull_FilmAd = 1 AND [FilmAd] IS NULL) OR ([FilmAd] = @Original_FilmAd)) AND ((@IsNull_FilmYonetmen = 1 AND [FilmYonetmen] IS NULL) OR ([FilmYonetmen] = @Original_FilmYonetmen)) AND ((@IsNull_Kategori = 1 AND [Kategori] IS NULL) OR ([Kategori] = @Original_Kategori)) AND ((@IsNull_YapımYılı = 1 AND [YapımYılı] IS NULL) OR ([YapımYılı] = @Original_YapımYılı)));
-SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (FilmId = @FilmId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Film] SET [filmAd] = @filmAd, [filmYonetmen] = @filmYonetmen, [yapımYılı] = @yapımYılı, [KategoriId] = @KategoriId WHERE (([filmId] = @Original_filmId) AND ((@IsNull_filmAd = 1 AND [filmAd] IS NULL) OR ([filmAd] = @Original_filmAd)) AND ((@IsNull_filmYonetmen = 1 AND [filmYonetmen] IS NULL) OR ([filmYonetmen] = @Original_filmYonetmen)) AND ((@IsNull_yapımYılı = 1 AND [yapımYılı] IS NULL) OR ([yapımYılı] = @Original_yapımYılı)) AND ((@IsNull_KategoriId = 1 AND [KategoriId] IS NULL) OR ([KategoriId] = @Original_KategoriId)));
+SELECT filmId, filmAd, filmYonetmen, yapımYılı, KategoriId FROM Film WHERE (filmId = @filmId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmYonetmen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YapımYılı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FilmAd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmAd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmAd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FilmYonetmen", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmYonetmen", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmYonetmen", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_YapımYılı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YapımYılı", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_YapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YapımYılı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FilmId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmYonetmen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@yapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yapımYılı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_filmId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_filmAd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmAd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_filmAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmAd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_filmYonetmen", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmYonetmen", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_filmYonetmen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filmYonetmen", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_yapımYılı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yapımYılı", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_yapımYılı", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yapımYılı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KategoriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filmId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "filmId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FilmKategori.Properties.Settings.Default.FilmKayıtConnectionString;
+            this._connection.ConnectionString = global::FilmCategory.Properties.Settings.Default.FilmKategoriConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1384,7 +1382,7 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM dbo.Film";
+            this._commandCollection[0].CommandText = "SELECT filmId, filmAd, filmYonetmen, yapımYılı, KategoriId FROM dbo.Film";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1392,7 +1390,7 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FilmKayıtDataSet1.FilmDataTable dataTable) {
+        public virtual int Fill(FilmKategoriDataSet1.FilmDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1405,9 +1403,9 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FilmKayıtDataSet1.FilmDataTable GetData() {
+        public virtual FilmKategoriDataSet1.FilmDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FilmKayıtDataSet1.FilmDataTable dataTable = new FilmKayıtDataSet1.FilmDataTable();
+            FilmKategoriDataSet1.FilmDataTable dataTable = new FilmKategoriDataSet1.FilmDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1415,14 +1413,14 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FilmKayıtDataSet1.FilmDataTable dataTable) {
+        public virtual int Update(FilmKategoriDataSet1.FilmDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FilmKayıtDataSet1 dataSet) {
+        public virtual int Update(FilmKategoriDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Film");
         }
         
@@ -1445,39 +1443,39 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_FilmId, string Original_FilmAd, string Original_FilmYonetmen, global::System.Nullable<int> Original_Kategori, global::System.Nullable<global::System.DateTime> Original_YapımYılı) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_FilmId));
-            if ((Original_FilmAd == null)) {
+        public virtual int Delete(int Original_filmId, string Original_filmAd, string Original_filmYonetmen, global::System.Nullable<global::System.DateTime> Original_yapımYılı, string Original_KategoriId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_filmId));
+            if ((Original_filmAd == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FilmAd));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_filmAd));
             }
-            if ((Original_FilmYonetmen == null)) {
+            if ((Original_filmYonetmen == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_FilmYonetmen));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_filmYonetmen));
             }
-            if ((Original_Kategori.HasValue == true)) {
+            if ((Original_yapımYılı.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Kategori.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_yapımYılı.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_YapımYılı.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_YapımYılı.Value));
-            }
-            else {
+            if ((Original_KategoriId == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_KategoriId));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1499,30 +1497,30 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FilmAd, string FilmYonetmen, global::System.Nullable<int> Kategori, global::System.Nullable<global::System.DateTime> YapımYılı) {
-            if ((FilmAd == null)) {
+        public virtual int Insert(string filmAd, string filmYonetmen, global::System.Nullable<global::System.DateTime> yapımYılı, string KategoriId) {
+            if ((filmAd == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(FilmAd));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(filmAd));
             }
-            if ((FilmYonetmen == null)) {
+            if ((filmYonetmen == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FilmYonetmen));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(filmYonetmen));
             }
-            if ((Kategori.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Kategori.Value));
+            if ((yapımYılı.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(yapımYılı.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((YapımYılı.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(YapımYılı.Value));
+            if ((KategoriId == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(KategoriId));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1544,65 +1542,65 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FilmAd, string FilmYonetmen, global::System.Nullable<int> Kategori, global::System.Nullable<global::System.DateTime> YapımYılı, int Original_FilmId, string Original_FilmAd, string Original_FilmYonetmen, global::System.Nullable<int> Original_Kategori, global::System.Nullable<global::System.DateTime> Original_YapımYılı, int FilmId) {
-            if ((FilmAd == null)) {
+        public virtual int Update(string filmAd, string filmYonetmen, global::System.Nullable<global::System.DateTime> yapımYılı, string KategoriId, int Original_filmId, string Original_filmAd, string Original_filmYonetmen, global::System.Nullable<global::System.DateTime> Original_yapımYılı, string Original_KategoriId, int filmId) {
+            if ((filmAd == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(FilmAd));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(filmAd));
             }
-            if ((FilmYonetmen == null)) {
+            if ((filmYonetmen == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FilmYonetmen));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(filmYonetmen));
             }
-            if ((Kategori.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Kategori.Value));
+            if ((yapımYılı.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(yapımYılı.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((YapımYılı.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(YapımYılı.Value));
-            }
-            else {
+            if ((KategoriId == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_FilmId));
-            if ((Original_FilmAd == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(KategoriId));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_filmId));
+            if ((Original_filmAd == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_FilmAd));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_filmAd));
             }
-            if ((Original_FilmYonetmen == null)) {
+            if ((Original_filmYonetmen == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_FilmYonetmen));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_filmYonetmen));
             }
-            if ((Original_Kategori.HasValue == true)) {
+            if ((Original_yapımYılı.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Kategori.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_yapımYılı.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_YapımYılı.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_YapımYılı.Value));
-            }
-            else {
+            if ((Original_KategoriId == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(FilmId));
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_KategoriId));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(filmId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1623,8 +1621,8 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FilmAd, string FilmYonetmen, global::System.Nullable<int> Kategori, global::System.Nullable<global::System.DateTime> YapımYılı, int Original_FilmId, string Original_FilmAd, string Original_FilmYonetmen, global::System.Nullable<int> Original_Kategori, global::System.Nullable<global::System.DateTime> Original_YapımYılı) {
-            return this.Update(FilmAd, FilmYonetmen, Kategori, YapımYılı, Original_FilmId, Original_FilmAd, Original_FilmYonetmen, Original_Kategori, Original_YapımYılı, Original_FilmId);
+        public virtual int Update(string filmAd, string filmYonetmen, global::System.Nullable<global::System.DateTime> yapımYılı, string KategoriId, int Original_filmId, string Original_filmAd, string Original_filmYonetmen, global::System.Nullable<global::System.DateTime> Original_yapımYılı, string Original_KategoriId) {
+            return this.Update(filmAd, filmYonetmen, yapımYılı, KategoriId, Original_filmId, Original_filmAd, Original_filmYonetmen, Original_yapımYılı, Original_KategoriId, Original_filmId);
         }
     }
     
@@ -1758,32 +1756,34 @@ SELECT FilmId, FilmAd, FilmYonetmen, Kategori, YapımYılı FROM Film WHERE (Fil
                 "((@IsNull_Kategori = 1 AND [Kategori] IS NULL) OR ([Kategori] = @Original_Katego" +
                 "ri)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategoriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Kategori", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Kategoriler] ([Kategori]) VALUES (@Kategori);\r\nSELECT Kategori" +
-                "Id, Kategori FROM Kategoriler WHERE (KategoriId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Kategoriler] ([KategoriId], [Kategori]) VALUES (@KategoriId, @" +
+                "Kategori);\r\nSELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @Ka" +
+                "tegoriId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Kategori", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Kategoriler] SET [Kategori] = @Kategori WHERE (([KategoriId] = @Original_KategoriId) AND ((@IsNull_Kategori = 1 AND [Kategori] IS NULL) OR ([Kategori] = @Original_Kategori)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Kategoriler] SET [KategoriId] = @KategoriId, [Kategori] = @Kategori WHERE (([KategoriId] = @Original_KategoriId) AND ((@IsNull_Kategori = 1 AND [Kategori] IS NULL) OR ([Kategori] = @Original_Kategori)));
 SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Kategori", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategoriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategoriId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Kategori", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Kategori", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kategori", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategoriId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "KategoriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FilmKategori.Properties.Settings.Default.FilmKayıtConnectionString;
+            this._connection.ConnectionString = global::FilmCategory.Properties.Settings.Default.FilmKategoriConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1800,7 +1800,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FilmKayıtDataSet1.KategorilerDataTable dataTable) {
+        public virtual int Fill(FilmKategoriDataSet1.KategorilerDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1813,9 +1813,9 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FilmKayıtDataSet1.KategorilerDataTable GetData() {
+        public virtual FilmKategoriDataSet1.KategorilerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FilmKayıtDataSet1.KategorilerDataTable dataTable = new FilmKayıtDataSet1.KategorilerDataTable();
+            FilmKategoriDataSet1.KategorilerDataTable dataTable = new FilmKategoriDataSet1.KategorilerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1823,14 +1823,14 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FilmKayıtDataSet1.KategorilerDataTable dataTable) {
+        public virtual int Update(FilmKategoriDataSet1.KategorilerDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FilmKayıtDataSet1 dataSet) {
+        public virtual int Update(FilmKategoriDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Kategoriler");
         }
         
@@ -1853,8 +1853,13 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_KategoriId, string Original_Kategori) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_KategoriId));
+        public virtual int Delete(string Original_KategoriId, string Original_Kategori) {
+            if ((Original_KategoriId == null)) {
+                throw new global::System.ArgumentNullException("Original_KategoriId");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_KategoriId));
+            }
             if ((Original_Kategori == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1883,12 +1888,18 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Kategori) {
-            if ((Kategori == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string KategoriId, string Kategori) {
+            if ((KategoriId == null)) {
+                throw new global::System.ArgumentNullException("KategoriId");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Kategori));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(KategoriId));
+            }
+            if ((Kategori == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Kategori));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1910,23 +1921,33 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Kategori, int Original_KategoriId, string Original_Kategori, int KategoriId) {
+        public virtual int Update(string KategoriId, string Kategori, string Original_KategoriId, string Original_Kategori) {
+            if ((KategoriId == null)) {
+                throw new global::System.ArgumentNullException("KategoriId");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(KategoriId));
+            }
             if ((Kategori == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Kategori));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Kategori));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_KategoriId));
+            if ((Original_KategoriId == null)) {
+                throw new global::System.ArgumentNullException("Original_KategoriId");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_KategoriId));
+            }
             if ((Original_Kategori == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Kategori));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Kategori));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(KategoriId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1947,8 +1968,8 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Kategori, int Original_KategoriId, string Original_Kategori) {
-            return this.Update(Kategori, Original_KategoriId, Original_Kategori, Original_KategoriId);
+        public virtual int Update(string Kategori, string Original_KategoriId, string Original_Kategori) {
+            return this.Update(Original_KategoriId, Kategori, Original_KategoriId, Original_Kategori);
         }
     }
     
@@ -2066,7 +2087,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(FilmKayıtDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FilmKategoriDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._kategorilerTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Kategoriler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2094,7 +2115,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(FilmKayıtDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FilmKategoriDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._kategorilerTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Kategoriler.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2120,7 +2141,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(FilmKayıtDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FilmKategoriDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._filmTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Film.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2170,7 +2191,7 @@ SELECT KategoriId, Kategori FROM Kategoriler WHERE (KategoriId = @KategoriId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(FilmKayıtDataSet1 dataSet) {
+        public virtual int UpdateAll(FilmKategoriDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
